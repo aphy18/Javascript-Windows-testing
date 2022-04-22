@@ -1,6 +1,3 @@
-console.log("GG WP")
-console.log("hello world")
-
 const button = document.querySelector('#button');
 const colorButton = document.querySelector('.color-button');
 const changeDivColor = document.querySelector('.change-div-color')
@@ -25,8 +22,13 @@ colorButton.addEventListener('click', () => {
 
 changeDivColor.addEventListener('click', () => {
     let input = prompt('What color do you want to change the div to');
-    div.style.backgroundColor = input;
 
+    if (input.charAt(0) === 'r' && input.charAt(1) === 'g' && input.charAt(2) === 'b') {
+        parseInt(input)
+    }
+
+
+    div.style.backgroundColor = input;
 })
 
 
