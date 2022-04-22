@@ -64,6 +64,10 @@ const sum = parseInt(askUserForNumber1) + parseInt(askUserForNumber2)
 
 const addInputs = () => {
     console.log("The sum of your inputs is ---->", sum)
+    const tag = document.createElement("p");
+    tag.innerText = `The sum of ${askUserForNumber1} and ${askUserForNumber2} is ${sum}`
+    tag.classList.add('bold')
+    document.body.appendChild(tag)
 }
 
 addInputs();
