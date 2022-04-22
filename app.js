@@ -27,16 +27,36 @@ colorButton.addEventListener('click', () => {
 
 // simple function to add 2 numbers together
 
+
+
 let askUserForNumber1 = prompt("Enter first number");
 
-while (isNaN(parseInt(askUserForNumber1))) {
-    askUserForNumber1 = prompt("You didn't enter a number, so enter a number")
+if (askUserForNumber1 !== null){
+    
+    while (isNaN(parseInt(askUserForNumber1))) {
+        askUserForNumber1 = prompt("You didn't enter a number, so enter a number")
+        if (askUserForNumber1 === null){
+            askUserForNumber1 = 0;
+        }
+    }
+} else {
+    askUserForNumber1 = 0;
 }
+
 
 let askUserForNumber2 = prompt("Enter second number")
 
-while (isNaN(parseInt(askUserForNumber2))) {
-    askUserForNumber2 = prompt("You didn't enter a number, so enter a number")
+if (askUserForNumber2 !== null){
+    
+    while (isNaN(parseInt(askUserForNumber2))) {
+        askUserForNumber2 = prompt("You didn't enter a number, so enter a number")
+        if (askUserForNumber2 === null){
+            askUserForNumber2 = 0;
+        }
+    }
+
+} else {
+    askUserForNumber2 = 0;
 }
 
 const sum = parseInt(askUserForNumber1) + parseInt(askUserForNumber2)
