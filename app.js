@@ -3,6 +3,8 @@ console.log("hello world")
 
 const button = document.querySelector('#button');
 const colorButton = document.querySelector('.color-button');
+const changeDivColor = document.querySelector('.change-div-color')
+const div = document.querySelector('.block')
 
 // click button to console log
 button.addEventListener('click',() => {
@@ -20,6 +22,12 @@ colorButton.addEventListener('click', () => {
     console.log(randColor)
 })
 
+
+changeDivColor.addEventListener('click', () => {
+    let input = prompt('What color do you want to change the div to');
+    div.style.backgroundColor = input;
+
+})
 
 
 
@@ -70,7 +78,10 @@ const addInputs = () => {
     document.body.appendChild(tag)
 }
 
-addInputs();
+if (askUserForNumber1 || askUserForNumber2 !== null) {
+    addInputs();
+}
+
 
 
 
